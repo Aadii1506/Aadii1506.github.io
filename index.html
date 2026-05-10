@@ -36,7 +36,6 @@
     overflow-x: hidden;
   }
 
-  /* Custom cursor */
   #cursor {
     position: fixed;
     width: 10px; height: 10px;
@@ -59,7 +58,6 @@
     transition: transform 0.18s ease-out, width 0.2s, height 0.2s;
   }
 
-  /* Noise overlay */
   body::after {
     content: '';
     position: fixed;
@@ -70,7 +68,6 @@
     opacity: 0.6;
   }
 
-  /* Nav */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -104,7 +101,6 @@
   }
   .nav-links a:hover { color: var(--accent); }
 
-  /* Hero */
   .hero {
     min-height: 100vh;
     display: grid;
@@ -158,10 +154,7 @@
     letter-spacing: -0.02em;
     margin-bottom: 0.3rem;
   }
-  h1.hero-name em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  h1.hero-name em { font-style: italic; color: var(--accent); }
   .hero-role {
     font-family: 'Syne', sans-serif;
     font-size: 1.1rem;
@@ -173,16 +166,11 @@
   .hero-desc {
     max-width: 420px;
     font-size: 0.95rem;
-    color: #b0ae a7;
     line-height: 1.8;
     margin-bottom: 3rem;
     color: #aba9a2;
   }
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary {
     background: var(--accent);
     color: var(--bg);
@@ -231,9 +219,7 @@
   .stat-block:nth-child(1) { animation-delay: 0.2s; }
   .stat-block:nth-child(2) { animation-delay: 0.35s; border-left-color: var(--accent2); background: rgba(96,200,240,0.03); }
   .stat-block:nth-child(3) { animation-delay: 0.5s; border-left-color: var(--accent3); background: rgba(240,160,96,0.03); }
-  @keyframes slideIn {
-    to { opacity: 1; transform: translateX(0); }
-  }
+  @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
   .stat-num {
     font-family: 'Fraunces', serif;
     font-size: 2.4rem;
@@ -249,7 +235,6 @@
     text-transform: uppercase;
   }
 
-  /* Section base */
   section {
     padding: 7rem 3rem;
     border-top: 1px solid var(--line);
@@ -265,10 +250,7 @@
     align-items: center;
     gap: 0.75rem;
   }
-  .section-label::before {
-    content: attr(data-num);
-    opacity: 0.4;
-  }
+  .section-label::before { content: attr(data-num); opacity: 0.4; }
   h2.section-title {
     font-family: 'Fraunces', serif;
     font-size: clamp(2rem, 3.5vw, 3rem);
@@ -279,19 +261,13 @@
   }
   h2.section-title em { font-style: italic; color: var(--accent); }
 
-  /* About */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
   }
-  .about-text p {
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #aba9a2;
-    margin-bottom: 1.25rem;
-  }
+  .about-text p { font-size: 1rem; line-height: 1.9; color: #aba9a2; margin-bottom: 1.25rem; }
   .about-text p strong { color: var(--text); font-weight: 600; }
   .about-quote {
     font-family: 'Fraunces', serif;
@@ -334,7 +310,6 @@
     padding: 0.2rem 0.5rem;
   }
 
-  /* Experience */
   .exp-list { display: flex; flex-direction: column; gap: 0; }
   .exp-item {
     display: grid;
@@ -353,52 +328,15 @@
     transition: background 0.3s;
   }
   .exp-item:hover::before { background: var(--accent); }
-  .exp-meta {}
-  .exp-date {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-  }
-  .exp-company {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-  .exp-loc {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
-  .exp-content {}
-  .exp-role {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    font-weight: 200;
-    margin-bottom: 1.25rem;
-    color: var(--text);
-  }
+  .exp-date { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+  .exp-company { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .exp-loc { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.08em; }
+  .exp-role { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.2rem; font-weight: 200; margin-bottom: 1.25rem; color: var(--text); }
   .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-  .exp-bullets li {
-    font-size: 0.9rem;
-    color: #aba9a2;
-    line-height: 1.7;
-    padding-left: 1.25rem;
-    position: relative;
-  }
-  .exp-bullets li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 0.75rem;
-  }
+  .exp-bullets li { font-size: 0.9rem; color: #aba9a2; line-height: 1.7; padding-left: 1.25rem; position: relative; }
+  .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
   .exp-bullets li strong { color: var(--text); }
 
-  /* Projects */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -429,27 +367,9 @@
   .proj-card.accent2::before { background: linear-gradient(135deg, rgba(96,200,240,0.05) 0%, transparent 60%); }
   .proj-card.accent3::before { background: linear-gradient(135deg, rgba(240,160,96,0.05) 0%, transparent 60%); }
   .proj-card.danger::before { background: linear-gradient(135deg, rgba(240,96,96,0.05) 0%, transparent 60%); }
-  .proj-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--muted);
-    letter-spacing: 0.12em;
-    margin-bottom: 1.5rem;
-  }
-  .proj-name {
-    font-family: 'Fraunces', serif;
-    font-size: 1.45rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-  }
-  .proj-card.accent2 .proj-name { }
-  .proj-desc {
-    font-size: 0.85rem;
-    color: #8a8880;
-    line-height: 1.75;
-    margin-bottom: 1.75rem;
-  }
+  .proj-num { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--muted); letter-spacing: 0.12em; margin-bottom: 1.5rem; }
+  .proj-name { font-family: 'Fraunces', serif; font-size: 1.45rem; font-weight: 300; line-height: 1.2; margin-bottom: 0.75rem; }
+  .proj-desc { font-size: 0.85rem; color: #8a8880; line-height: 1.75; margin-bottom: 1.75rem; }
   .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.75rem; }
   .tag {
     font-family: 'DM Mono', monospace;
@@ -476,13 +396,7 @@
   .proj-card.danger .proj-link { color: var(--danger); }
   .proj-link::after { content: '↗'; }
 
-  /* Skills */
-  .skills-area {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-  }
-  .skill-group { }
+  .skills-area { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
   .skill-group-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
@@ -505,13 +419,7 @@
   }
   .skill-pill:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,240,96,0.05); }
 
-  /* Contact */
-  .contact-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-  }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
   .contact-headline {
     font-family: 'Fraunces', serif;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -540,7 +448,6 @@
   .contact-link .link-arrow { color: var(--accent); font-size: 1.1rem; }
   .contact-link-inner { flex: 1; }
 
-  /* Footer */
   footer {
     border-top: 1px solid var(--line);
     padding: 2rem 3rem;
@@ -548,55 +455,22 @@
     justify-content: space-between;
     align-items: center;
   }
-  .footer-copy {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-  }
-  .footer-status {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent);
-  }
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
+  .footer-copy { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; }
+  .footer-status { display: flex; align-items: center; gap: 0.5rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--accent); }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  /* Scroll animations */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
-  /* Hero text animation */
-  .hero-left > * {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: heroReveal 0.7s ease forwards;
-  }
+  .hero-left > * { opacity: 0; transform: translateY(20px); animation: heroReveal 0.7s ease forwards; }
   .hero-eyebrow { animation-delay: 0.1s; }
   h1.hero-name { animation-delay: 0.22s; }
   .hero-role { animation-delay: 0.34s; }
   .hero-desc { animation-delay: 0.46s; }
   .hero-cta { animation-delay: 0.58s; }
-  @keyframes heroReveal {
-    to { opacity: 1; transform: none; }
-  }
+  @keyframes heroReveal { to { opacity: 1; transform: none; } }
 
-  /* Scrollbar */
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--line); }
@@ -634,7 +508,6 @@
 <section class="hero" id="home" style="border-top: none; padding-top: 0; padding-bottom: 0;">
   <div class="hero-grid-lines"></div>
   <div class="hero-glow"></div>
-
   <div class="hero-left">
     <div class="hero-eyebrow">Software Engineer · Chennai, India</div>
     <h1 class="hero-name">Aditya<br><em>Singhal</em></h1>
@@ -650,7 +523,6 @@
       <a href="https://github.com/Aadii1506" target="_blank" class="btn-outline">GitHub ↗</a>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="stat-block">
       <div class="stat-num" style="color: var(--accent);">10×</div>
@@ -673,20 +545,9 @@
   <h2 class="section-title">Who I <em>am</em></h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>
-        I'm a <strong>Software Engineer at Barclays Bank</strong>, specializing in Python backend development,
-        cloud infrastructure on AWS, and AI-integrated systems. I thrive at the intersection of
-        data engineering and applied intelligence.
-      </p>
-      <p>
-        My work spans designing <strong>automated validation frameworks</strong> that cut manual effort by 83%,
-        building <strong>dbt-based modular pipelines</strong>, and architecting production-ready
-        RAG systems that make real videos queryable through natural language.
-      </p>
-      <p>
-        I'm a competitive programmer at heart — <strong>1st in Code Crash</strong>, 1st rank in SRM academics,
-        AWS Certified — and I bring that precision-first mindset to every system I build.
-      </p>
+      <p>I'm a <strong>Software Engineer at Barclays Bank</strong>, specializing in Python backend development, cloud infrastructure on AWS, and AI-integrated systems. I thrive at the intersection of data engineering and applied intelligence.</p>
+      <p>My work spans designing <strong>automated validation frameworks</strong> that cut manual effort by 83%, building <strong>dbt-based modular pipelines</strong>, and architecting production-ready RAG systems that make real videos queryable through natural language.</p>
+      <p>I'm a competitive programmer at heart — <strong>1st in Code Crash</strong>, 1st rank in SRM academics, AWS Certified — and I bring that precision-first mindset to every system I build.</p>
       <div class="about-quote">
         "Build systems that scale. Write code that lasts.<br>
         <span>Learn things that compound.</span>"
@@ -695,36 +556,12 @@
     <div>
       <div class="section-label" data-num="" style="margin-bottom: 1.25rem;">Achievements & Certifications</div>
       <div class="cert-list">
-        <div class="cert-item">
-          <span class="cert-icon">AWS</span>
-          <span class="cert-name">AWS Certified Cloud Practitioner</span>
-          <span class="cert-award">CERT</span>
-        </div>
-        <div class="cert-item">
-          <span class="cert-icon">DSA</span>
-          <span class="cert-name">Data Structures & Algorithms Certification</span>
-          <span class="cert-award">CERT</span>
-        </div>
-        <div class="cert-item">
-          <span class="cert-icon">GIT</span>
-          <span class="cert-name">Git and GitHub Essentials</span>
-          <span class="cert-award">CERT</span>
-        </div>
-        <div class="cert-item">
-          <span class="cert-icon">🏆</span>
-          <span class="cert-name">1st Place — Code Crash Coding Competition</span>
-          <span class="cert-award">1ST</span>
-        </div>
-        <div class="cert-item">
-          <span class="cert-icon">🎓</span>
-          <span class="cert-name">1st Academic Rank — SRM University</span>
-          <span class="cert-award">1ST</span>
-        </div>
-        <div class="cert-item">
-          <span class="cert-icon">🥉</span>
-          <span class="cert-name">3rd Place — NEO Coding Competition</span>
-          <span class="cert-award">3RD</span>
-        </div>
+        <div class="cert-item"><span class="cert-icon">AWS</span><span class="cert-name">AWS Certified Cloud Practitioner</span><span class="cert-award">CERT</span></div>
+        <div class="cert-item"><span class="cert-icon">DSA</span><span class="cert-name">Data Structures & Algorithms Certification</span><span class="cert-award">CERT</span></div>
+        <div class="cert-item"><span class="cert-icon">GIT</span><span class="cert-name">Git and GitHub Essentials</span><span class="cert-award">CERT</span></div>
+        <div class="cert-item"><span class="cert-icon">🏆</span><span class="cert-name">1st Place — Code Crash Coding Competition</span><span class="cert-award">1ST</span></div>
+        <div class="cert-item"><span class="cert-icon">🎓</span><span class="cert-name">1st Academic Rank — SRM University</span><span class="cert-award">1ST</span></div>
+        <div class="cert-item"><span class="cert-icon">🥉</span><span class="cert-name">3rd Place — NEO Coding Competition</span><span class="cert-award">3RD</span></div>
       </div>
     </div>
   </div>
@@ -795,18 +632,9 @@
     <a href="https://github.com/Aadii1506" target="_blank" class="proj-card reveal">
       <div class="proj-num">PROJECT 01</div>
       <div class="proj-name">YouTube RAG Application</div>
-      <p class="proj-desc">
-        End-to-end Retrieval-Augmented Generation system enabling highly accurate
-        video-grounded Q&A via dynamic transcript ingestion. Sub-second vector retrieval
-        with persistent caching for high throughput.
-      </p>
+      <p class="proj-desc">End-to-end Retrieval-Augmented Generation system enabling highly accurate video-grounded Q&A via dynamic transcript ingestion. Sub-second vector retrieval with persistent caching for high throughput.</p>
       <div class="proj-tags">
-        <span class="tag">Python</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">React</span>
-        <span class="tag">FAISS</span>
-        <span class="tag">MiniLM</span>
-        <span class="tag">RAG</span>
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">FAISS</span><span class="tag">MiniLM</span><span class="tag">RAG</span>
       </div>
       <span class="proj-link">View on GitHub</span>
     </a>
@@ -814,17 +642,9 @@
     <a href="https://github.com/Aadii1506" target="_blank" class="proj-card accent2 reveal">
       <div class="proj-num">PROJECT 02</div>
       <div class="proj-name">PulseChat</div>
-      <p class="proj-desc">
-        Real-time event-driven messaging platform handling 100+ concurrent connections
-        with sub-100ms latency. Full JWT auth, group roles, typing indicators, read
-        receipts, and a Telegram-inspired UI.
-      </p>
+      <p class="proj-desc">Real-time event-driven messaging platform handling 100+ concurrent connections with sub-100ms latency. Full JWT auth, group roles, typing indicators, read receipts, and a Telegram-inspired UI.</p>
       <div class="proj-tags">
-        <span class="tag">FastAPI</span>
-        <span class="tag">WebSockets</span>
-        <span class="tag">Redis</span>
-        <span class="tag">React</span>
-        <span class="tag">JWT</span>
+        <span class="tag">FastAPI</span><span class="tag">WebSockets</span><span class="tag">Redis</span><span class="tag">React</span><span class="tag">JWT</span>
       </div>
       <span class="proj-link" style="color: var(--accent2);">View on GitHub</span>
     </a>
@@ -832,68 +652,31 @@
     <a href="https://github.com/Aadii1506/AcademixConnect" target="_blank" class="proj-card accent3 reveal">
       <div class="proj-num">PROJECT 03</div>
       <div class="proj-name">AcademixConnect</div>
-      <p class="proj-desc">
-        Modular Django backend for collaborative academic workflows — REST APIs,
-        authentication and role-based access control, optimized relational schema
-        and query tuning for production-grade reliability.
-      </p>
+      <p class="proj-desc">Modular Django backend for collaborative academic workflows — REST APIs, authentication and role-based access control, optimized relational schema and query tuning for production-grade reliability.</p>
       <div class="proj-tags">
-        <span class="tag">Django</span>
-        <span class="tag">REST APIs</span>
-        <span class="tag">RBAC</span>
-        <span class="tag">SQL</span>
+        <span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">RBAC</span><span class="tag">SQL</span>
       </div>
       <span class="proj-link" style="color: var(--accent3);">View on GitHub</span>
     </a>
 
-    <a href="https://github.com/Aadii1506/Computer-Networks-Project-Chatroom" target="_blank" class="proj-card danger reveal">
+    <a href="https://github.com/Aadii1506" target="_blank" class="proj-card danger reveal">
       <div class="proj-num">PROJECT 04</div>
-      <div class="proj-name">CN Chatroom</div>
-      <p class="proj-desc">
-        Low-level computer networks chatroom project in C++ demonstrating socket
-        programming, TCP/IP communication, and multi-client server architecture —
-        built to understand networking fundamentals from the ground up.
-      </p>
+      <div class="proj-name">Resume Parser & Ranker</div>
+      <p class="proj-desc">AI-powered resume parsing engine that extracts structured data — skills, experience, education — from raw PDFs using NLP pipelines, then scores and ranks candidates against a job description using semantic similarity and keyword matching.</p>
       <div class="proj-tags">
-        <span class="tag">C++</span>
-        <span class="tag">Sockets</span>
-        <span class="tag">TCP/IP</span>
-        <span class="tag">Networking</span>
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">NLP</span><span class="tag">spaCy</span><span class="tag">PDF Parsing</span><span class="tag">Embeddings</span>
       </div>
       <span class="proj-link" style="color: var(--danger);">View on GitHub</span>
     </a>
 
     <a href="https://github.com/Aadii1506/DBMS-PROJECT-ONLINE-FOOD-DELIVERY-MANAGEMENT-" target="_blank" class="proj-card reveal">
       <div class="proj-num">PROJECT 05</div>
-      <div class="proj-name">Food Delivery DBMS</div>
-      <p class="proj-desc">
-        Complete database management system for online food delivery — relational schema
-        design, complex SQL queries, Java backend integration, and transaction management
-        demonstrating strong DBMS fundamentals.
-      </p>
+      <div class="proj-name">Food Delivery Platform</div>
+      <p class="proj-desc">Full-stack food delivery management system with a normalised relational schema, complex multi-join SQL queries, Java backend, and ACID-compliant transaction management — covering order lifecycle, inventory, and user management end-to-end.</p>
       <div class="proj-tags">
-        <span class="tag">Java</span>
-        <span class="tag">SQL</span>
-        <span class="tag">DBMS</span>
-        <span class="tag">Transactions</span>
+        <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">DBMS</span><span class="tag">Transactions</span><span class="tag">Schema Design</span>
       </div>
       <span class="proj-link">View on GitHub</span>
-    </a>
-
-    <a href="https://github.com/Aadii1506/google_translator" target="_blank" class="proj-card accent2 reveal">
-      <div class="proj-num">PROJECT 06</div>
-      <div class="proj-name">Google Translator CLI</div>
-      <p class="proj-desc">
-        Python-based command-line translation tool integrating Google Translate API —
-        supporting multi-language detection, batch translation, and clean terminal output
-        for developer productivity.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Python</span>
-        <span class="tag">API Integration</span>
-        <span class="tag">CLI</span>
-      </div>
-      <span class="proj-link" style="color: var(--accent2);">View on GitHub</span>
     </a>
 
   </div>
@@ -904,75 +687,42 @@
   <div class="section-label" data-num="04">Skills</div>
   <h2 class="section-title">What I <em>know</em></h2>
   <div class="skills-area">
-
     <div class="skill-group reveal">
       <div class="skill-group-label">Languages</div>
       <div class="skill-pills">
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">TypeScript</span>
-        <span class="skill-pill">Java</span>
-        <span class="skill-pill">C++</span>
-        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">Python</span><span class="skill-pill">TypeScript</span><span class="skill-pill">Java</span><span class="skill-pill">C++</span><span class="skill-pill">SQL</span>
       </div>
     </div>
-
     <div class="skill-group reveal">
       <div class="skill-group-label">Backend & APIs</div>
       <div class="skill-pills">
-        <span class="skill-pill">FastAPI</span>
-        <span class="skill-pill">Django</span>
-        <span class="skill-pill">REST APIs</span>
-        <span class="skill-pill">WebSockets</span>
-        <span class="skill-pill">Redis</span>
-        <span class="skill-pill">Spring</span>
+        <span class="skill-pill">FastAPI</span><span class="skill-pill">Django</span><span class="skill-pill">REST APIs</span><span class="skill-pill">WebSockets</span><span class="skill-pill">Redis</span><span class="skill-pill">Spring</span>
       </div>
     </div>
-
     <div class="skill-group reveal">
       <div class="skill-group-label">Cloud & Data</div>
       <div class="skill-pills">
-        <span class="skill-pill">AWS S3</span>
-        <span class="skill-pill">Athena</span>
-        <span class="skill-pill">Step Functions</span>
-        <span class="skill-pill">CloudWatch</span>
-        <span class="skill-pill">dbt</span>
-        <span class="skill-pill">CI/CD</span>
+        <span class="skill-pill">AWS S3</span><span class="skill-pill">Athena</span><span class="skill-pill">Step Functions</span><span class="skill-pill">CloudWatch</span><span class="skill-pill">dbt</span><span class="skill-pill">CI/CD</span>
       </div>
     </div>
-
     <div class="skill-group reveal">
       <div class="skill-group-label">GenAI & Vector Search</div>
       <div class="skill-pills">
-        <span class="skill-pill">RAG Systems</span>
-        <span class="skill-pill">LLM Integration</span>
-        <span class="skill-pill">FAISS</span>
-        <span class="skill-pill">Embeddings</span>
-        <span class="skill-pill">Agentic AI</span>
+        <span class="skill-pill">RAG Systems</span><span class="skill-pill">LLM Integration</span><span class="skill-pill">FAISS</span><span class="skill-pill">Embeddings</span><span class="skill-pill">Agentic AI</span>
       </div>
     </div>
-
     <div class="skill-group reveal">
       <div class="skill-group-label">Frontend</div>
       <div class="skill-pills">
-        <span class="skill-pill">React</span>
-        <span class="skill-pill">Angular</span>
-        <span class="skill-pill">HTML/CSS</span>
-        <span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">React</span><span class="skill-pill">Angular</span><span class="skill-pill">HTML/CSS</span><span class="skill-pill">TypeScript</span>
       </div>
     </div>
-
     <div class="skill-group reveal">
       <div class="skill-group-label">Core Concepts</div>
       <div class="skill-pills">
-        <span class="skill-pill">System Design</span>
-        <span class="skill-pill">DSA</span>
-        <span class="skill-pill">OOP</span>
-        <span class="skill-pill">DBMS</span>
-        <span class="skill-pill">Agile / SDLC</span>
-        <span class="skill-pill">Git</span>
+        <span class="skill-pill">System Design</span><span class="skill-pill">DSA</span><span class="skill-pill">OOP</span><span class="skill-pill">DBMS</span><span class="skill-pill">Agile / SDLC</span><span class="skill-pill">Git</span>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -981,31 +731,20 @@
   <div class="section-label" data-num="05">Contact</div>
   <div class="contact-inner">
     <div>
-      <div class="contact-headline">
-        Let's build<br>something<br><em>great</em>
-      </div>
+      <div class="contact-headline">Let's build<br>something<br><em>great</em></div>
     </div>
     <div>
       <div class="contact-links">
         <a href="mailto:adisinghal1506@gmail.com" class="contact-link reveal">
-          <div class="contact-link-inner">
-            <div class="link-label">Email</div>
-            <div class="link-val">adisinghal1506@gmail.com</div>
-          </div>
+          <div class="contact-link-inner"><div class="link-label">Email</div><div class="link-val">adisinghal1506@gmail.com</div></div>
           <div class="link-arrow">↗</div>
         </a>
         <a href="https://www.linkedin.com/in/aditya-singhal-a4a698200/" target="_blank" class="contact-link reveal">
-          <div class="contact-link-inner">
-            <div class="link-label">LinkedIn</div>
-            <div class="link-val">aditya-singhal-a4a698200</div>
-          </div>
+          <div class="contact-link-inner"><div class="link-label">LinkedIn</div><div class="link-val">aditya-singhal-a4a698200</div></div>
           <div class="link-arrow">↗</div>
         </a>
         <a href="https://github.com/Aadii1506" target="_blank" class="contact-link reveal">
-          <div class="contact-link-inner">
-            <div class="link-label">GitHub</div>
-            <div class="link-val">github.com/Aadii1506</div>
-          </div>
+          <div class="contact-link-inner"><div class="link-label">GitHub</div><div class="link-val">github.com/Aadii1506</div></div>
           <div class="link-arrow">↗</div>
         </a>
       </div>
@@ -1015,14 +754,10 @@
 
 <footer>
   <div class="footer-copy">© 2025 Aditya Singhal — All rights reserved</div>
-  <div class="footer-status">
-    <div class="status-dot"></div>
-    Open to opportunities
-  </div>
+  <div class="footer-status"><div class="status-dot"></div>Open to opportunities</div>
 </footer>
 
 <script>
-// Custom cursor
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
 let mx = 0, my = 0, rx = 0, ry = 0;
@@ -1036,22 +771,17 @@ function animateRing() {
 }
 animateRing();
 
-// Hover effects
 document.querySelectorAll('a, button').forEach(el => {
   el.addEventListener('mouseenter', () => { ring.style.width='56px'; ring.style.height='56px'; });
   el.addEventListener('mouseleave', () => { ring.style.width='36px'; ring.style.height='36px'; });
 });
 
-// Scroll-based nav
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
-// Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
+  entries.forEach(e => {
     if (e.isIntersecting) {
       const siblings = e.target.parentElement.querySelectorAll('.reveal');
       let delay = 0;
